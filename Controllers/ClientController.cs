@@ -4,13 +4,14 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using System.Data;
-//using System.Data.Entity;
-//using System.Data.Entity.Infrastructure;
+using System.Data.Entity;
+using System.Data.Entity.Infrastructure;
 using System.Net;
 using System.Net.Http;
-//using System.Web.Http;
-//using System.Web.Http.Description;
+using System.Web.Http;
+using System.Web.Http.Description;
 using Client_Challenge.models;
+
 
 // For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -18,13 +19,6 @@ namespace Client_Challenge.Controllers
 {
     public class ClientController : Controller
     {
-        // GET: /<controller>/
-        //public IActionResult Index()
-        //{
-        //    return View();
-        //}
-
-
         private DBModel db = new DBModel();
 
         // GET: api/Client
