@@ -30,7 +30,7 @@ namespace Client_Challenge.Controllers
 
         // PUT: api/Client/5
         [ResponseType(typeof(void))]
-        public IHttpActionResult PutClient(int id, Client client)
+        public IActionResult PutClient(int id, Client client)
         {
 
             if (id != client.ClientID)
@@ -61,7 +61,7 @@ namespace Client_Challenge.Controllers
 
         // POST: api/Client
         [ResponseType(typeof(Client))]
-        public IHttpActionResult PostClient(Client client)
+        public IActionResult PostClient(Client client)
         {
             db.Clients.Add(client);
             db.SaveChanges();
@@ -71,7 +71,7 @@ namespace Client_Challenge.Controllers
 
         // DELETE: api/Client/5
         [ResponseType(typeof(Client))]
-        public IHttpActionResult DeleteClient(int id)
+        public IActionResult DeleteClient(int id)
         {
             Client client = db.Clients.Find(id);
             if (client == null)
